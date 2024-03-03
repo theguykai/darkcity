@@ -7,7 +7,11 @@ const Navbar = () => {
             <a href="">Home</a>
           </li>
           <li>
-            <a href="">Porfolio</a>
+            <a href="">About</a>
+          </li>
+          <h4>Dark City Productions</h4>
+          <li>
+            <a href="">Portfolio</a>
           </li>
           <li>
             <a href="">Contact</a>
@@ -15,6 +19,6 @@ const Navbar = () => {
         </ul>
       </nav>
     </div>
-  )
-}
-export default Navbar
+  );
+};
+export default Navbar;
