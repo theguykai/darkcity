@@ -7,7 +7,7 @@ const Video = () => {
       <section>
         <ReactPlayer
           id="video"
-          height="90vh"
+          height="100vh"
           width="100vw"
           playing
           muted={"true"}

@@ -6,15 +6,15 @@ const Header = () => {
   useEffect(() => {
     setTimeout(() => {
       setShowComponent(false);
-    }, 3000);
+    }, 1000);
 
-    return () => clearTimeout(3000);
+    return () => clearTimeout(5000);
   }, []);
 
   return (
     <div>
       {showComponent && (
-        <div id="logo">
+        <div id="title">
           <h1>Dark City Productions</h1>
         </div>
       )}
