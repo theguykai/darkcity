@@ -1,20 +1,9 @@
-import images from "../img/thumbnails";
-
-const Portfolio = () => {
+const Portfolio = (props) => {
   return (
     <div>
       <section id="portfolio">
         <h1>Portfolio</h1>
-        <div id="portfolio-container">
-          {/* map over the thumbnails and render cards for each one in grid */}
-          {images.map((image) => (
-            <div className="card">
-              <img src={image} alt="thumbnail" />
-              <h3>Project Title</h3>
-              <p>Project Description</p>
-            </div>
-          ))}
-        </div>
+        <div id="portfolio-container">{props.projects}</div>
       </section>
     </div>
   );

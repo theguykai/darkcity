@@ -6,7 +6,7 @@ const About = () => {
       <section id="about-section">
         <article>
           <img src={profilePic} alt="profilepic" id="profile-img" />
-          <div id="about-text">
+          <div className="context">
             <h2>I'm Ashley Gecks</h2>
             <p>A freelance cinematographer located on the Gold Coast.</p>
             <p>
