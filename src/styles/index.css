@@ -1,29 +1,74 @@
-/* @tailwind base;
+@tailwind base;
 @tailwind components;
-@tailwind utilities; */
+@tailwind utilities;
 
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  font-family: sans-serif;
-  color: #eee;
+  font-family: "Kode Mono", monospace;
+  background-color: black;
+  color: #ddd;
+}
+/*  */
+li {
+  transition: 0.1s;
 }
 
-nav,
+li:hover {
+  border-color: #ddd;
+}
+
+.project-context,
+.project-img {
+  transition: all 1s ease-in-out;
+}
+
+.project-link:hover {
+  .project-context {
+    display: block;
+    width: 50%;
+    height: 100%;
+  }
+  .project-img {
+    width: 50%;
+    height: 100%;
+  }
+}
+
+/* nav,
 ul,
 li {
   z-index: 1;
 }
 
 nav {
-  display: flex;
   justify-content: center;
   align-items: center;
   padding: 15px;
   background-color: #000;
   color: #ddd;
   z-index: 1;
+}
+
+nav,
+ul,
+article,
+form,
+.context,
+.project-context,
+.card,
+.project-link,
+.contact-input,
+#title,
+#about-section,
+#portfolio-container,
+#contact-section {
+  display: flex;
+}
+
+hr {
+  width: 100%;
 }
 
 h4 {
@@ -36,24 +81,13 @@ h4 {
 }
 
 ul {
-  display: flex;
   justify-content: space-between;
   align-items: center;
 }
 
-li {
-  list-style: none;
-  margin: 0 10px;
-  padding: 2.5px;
-  border-bottom: 2px solid transparent;
-  transition: 0.3s;
-}
 
-li:hover {
-  border-color: #ddd;
-}
 
-.nav-link {
+/* .nav-link {
   font-size: 14px;
   text-decoration: none;
   color: #ddd;
@@ -66,7 +100,6 @@ section {
 }
 
 #title {
-  display: flex;
   justify-content: center;
   align-items: center;
   flex-direction: column;
@@ -88,10 +121,6 @@ h1 {
   left: 0;
 }
 
-#video:hover {
-  pointer-events: none;
-}
-
 #cover {
   height: 90vh;
   width: 100vw;
@@ -100,7 +129,6 @@ h1 {
 }
 
 #about-section {
-  display: flex;
   justify-content: space-evenly;
   align-items: center;
   height: 75vh;
@@ -117,21 +145,20 @@ h1 {
 
 .context,
 .project-context {
-  display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
   gap: 10px;
   height: 100%;
   width: 50%;
-  padding: 20px;
+  padding: 30px;
   color: #eee;
   text-align: center;
+  font-family: "Courier New", Courier, monospace;
   font-weight: 500;
 }
 
 article {
-  display: flex;
   height: 50%;
   width: 60%;
   background-color: #000;
@@ -149,11 +176,10 @@ article {
 .card {
   height: 20%;
   width: 75%;
-  display: flex;
+  transition: 0.4s;
 }
 
 #portfolio-container {
-  display: flex;
   justify-content: center;
   align-items: center;
   flex-direction: column;
@@ -162,34 +188,32 @@ article {
 }
 
 .project-link {
-  width: 50%;
+  width: 100%;
   transition: 0.5s;
 }
 
-.project-link:hover {
-  box-shadow: 0 0 20px 10px rgba(255, 255, 255, 0.1);
+.card:hover {
+  box-shadow: 0 0 50px 10px rgba(255, 255, 255, 0.05);
   transform: scale(1.2);
 }
 
-.project-link:hover + .project-context {
-  border-color: #ddd;
+.card:hover .project-context {
   opacity: 1;
 }
 
 .project-img {
   height: 100%;
-  width: 100%;
+  width: 50%;
   border-radius: 10px;
   object-fit: contain;
 }
 
 .project-context {
   opacity: 0;
-  transition: 1s;
+  transition: 0.4s;
 }
 
 #contact-section {
-  display: flex;
   justify-content: center;
   align-items: center;
   height: 100vh;
@@ -197,7 +221,6 @@ article {
 }
 
 form {
-  display: flex;
   justify-content: center;
   align-items: center;
   flex-direction: column;
@@ -206,7 +229,6 @@ form {
 }
 
 .contact-input {
-  display: flex;
   justify-content: space-evenly;
   align-items: center;
   margin-bottom: 20px;
@@ -216,4 +238,4 @@ form {
 label,
 input {
   width: 50%;
-}
+} */

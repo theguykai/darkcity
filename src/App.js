@@ -14,6 +14,7 @@ export default function App() {
     return (
       <Project
         key={image.id}
+        num={image.id}
         title={image.title}
         description={image.description}
         img={image.img}
