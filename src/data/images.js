@@ -23,13 +23,13 @@ export default [
     title: "Class Act",
     description: "This is a description of project 3",
     img: classact,
-    url: "",
+    url: "https://www.youtube.com/watch?v=VTChfWZ1Q7o",
   },
   {
     id: 4,
     title: "Genesis Nutrition - Commercial",
     description: "This is a description of project 4",
     img: commercial,
-    url: "",
+    url: "https://www.youtube.com/watch?v=Bw-MXVBl-1Q",
   },
 ];

@@ -7,8 +7,9 @@
   padding: 0;
   box-sizing: border-box;
   font-family: "Kode Mono", monospace;
-  background-color: black;
+  background-color: #111;
   color: #ddd;
+  scroll-behavior: smooth;
 }
 /*  */
 li {
@@ -19,22 +20,17 @@ li:hover {
   border-color: #ddd;
 }
 
-.project-context,
+/* .project-context,
 .project-img {
   transition: all 1s ease-in-out;
 }
 
-.project-link:hover {
-  .project-context {
-    display: block;
-    width: 50%;
-    height: 100%;
-  }
-  .project-img {
-    width: 50%;
-    height: 100%;
-  }
-}
+.project-link:hover + .project-context {
+  display: flex;
+  opacity: 1;
+  width: 50%;
+  height: 100%;
+} */
 
 /* nav,
 ul,
