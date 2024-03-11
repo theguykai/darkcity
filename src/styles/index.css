@@ -9,27 +9,34 @@
   font-family: "Kode Mono", monospace;
   background-color: #111;
   color: #ddd;
+  overflow-x: hidden;
+  overflow-y: auto;
   scroll-behavior: smooth;
 }
+
+*::-webkit-scrollbar {
+  display: none;
+}
+
 /*  */
-li {
+.nav-link {
   transition: 0.1s;
 }
 
-li:hover {
+.nav-link:hover {
   border-color: #ddd;
 }
 
 .hiddenAbout {
   opacity: 0;
   transform: translateY(-75%);
-  transition: 2s ease-in-out;
+  transition: transform 2s ease-in-out, opacity 2s ease-in-out;
 }
 
 .hiddenContact {
   opacity: 0;
   transform: translateY(100%);
-  transition: 2s ease-in-out;
+  transition: transform 2s ease-in-out, opacity 2s ease-in-out;
 }
 
 .showAbout {
@@ -84,6 +91,7 @@ hr {
   animation: none;
   box-shadow: 0 0 15px 10px rgba(0, 0, 255, 1);
 }
+
 /* .project-context,
 .project-img {
   transition: all 1s ease-in-out;

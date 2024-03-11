@@ -6,6 +6,7 @@ import About from "./components/About";
 import Portfolio from "./components/Portfolio";
 import Project from "./components/Project";
 import Contact from "./components/Contact";
+import Footer from "./components/Footer";
 
 import images from "./data/images.js";
 
@@ -31,6 +32,7 @@ export default function App() {
       <About />
       <Portfolio projects={projects} />
       <Contact />
+      <Footer />
     </div>
   );
 }

@@ -20,7 +20,7 @@ const About = () => {
           }
         });
       },
-      { threshold: 0.1 }
+      { threshold: 0.25 }
     );
 
     if (headingRef.current) {
@@ -78,7 +78,7 @@ const About = () => {
                 href="#contact-section"
                 ref={contactRef}
                 id="contact-link"
-                className="hiddenContact glowing-shadow bg-white text-black text-md rounded-xl p-3 mx-auto my-4 h-full min-w-min  hover:bg-blue-500 hover:text-white transition-all duration-250 ease-in-out"
+                className="hiddenContact glowing-shadow bg-white text-black text-md rounded-xl p-3 mx-auto my-4 h-full min-w-min  hover:bg-blue-500 hover:text-white transition duration-400 ease-in-out"
               >
                 Contact Me
               </a>

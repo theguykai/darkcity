@@ -4,16 +4,16 @@ import ReactPlayer from "react-player";
 const Video = () => {
   return (
     <div>
-      <section id="home-section">
+      <section id="home-section" className="h-[75vh] md:h-screen md:w-screen">
         <div
           id="video-blocker"
-          className="absolute h-screen w-screen opacity-0"
+          className="absolute h-full w-full opacity-0"
         ></div>
         <ReactPlayer
           id="video"
-          height="100vh"
-          width="100vw"
           playing
+          height={"100%"}
+          width={"100%"}
           volume={"0"}
           muted={"true"}
           loop={"true"}
