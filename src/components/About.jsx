@@ -1,6 +1,55 @@
+import React, { useEffect, useRef, useState } from "react";
 import profilePic from "../img/ashprofile.jpg";
 
 const About = () => {
+  const headingRef = useRef(null);
+  const paragraphRef = useRef(null);
+  const contactRef = useRef(null);
+  const hrRef1 = useRef(null);
+  const hrRef2 = useRef(null);
+  const [animateHr, setAnimateHr] = useState(false);
+
+  useEffect(() => {
+    const observer = new IntersectionObserver(
+      (entries) => {
+        entries.forEach((entry) => {
+          if (entry.isIntersecting) {
+            entry.target.classList.add("showAbout");
+            setTimeout(() => setAnimateHr(true), 1500);
+            observer.unobserve(entry.target);
+          }
+        });
+      },
+      { threshold: 0.1 }
+    );
+
+    if (headingRef.current) {
+      observer.observe(headingRef.current);
+    }
+
+    if (paragraphRef.current) {
+      observer.observe(paragraphRef.current);
+    }
+
+    if (contactRef.current) {
+      setTimeout(() => observer.observe(contactRef.current), 1000);
+    }
+
+    return () => observer.disconnect();
+  }, []);
+
+  useEffect(() => {
+    if (animateHr && hrRef1.current) {
+      hrRef1.current.classList.add("hr-full-width");
+    }
+  }, [animateHr]);
+
+  useEffect(() => {
+    if (animateHr && hrRef2.current) {
+      hrRef2.current.classList.add("hr-full-width");
+    }
+  }, [animateHr]);
+
   return (
     <div>
       <section
@@ -16,18 +65,20 @@ const About = () => {
           />
           <div className="context flex justify-center items-center w-1/2">
             <div className="flex flex-col gap-3 w-11/12 text-center">
-              <h2 className="text-3xl font-bold">I'm Ashley Gecks</h2>
-              <hr className="w-full" />
-              <p className="text-md">
+              <h2 ref={headingRef} className="hiddenAbout text-3xl font-bold">
+                I'm Ashley Gecks
+              </h2>
+              <hr ref={hrRef1} />
+              <p ref={paragraphRef} className="hiddenAbout text-md">
                 A freelance cinematographer & camera operator located on the
                 Gold Coast
               </p>
-              <hr className="w-full" />
-              <p className="text-sm"></p>
+              <hr ref={hrRef2} />
               <a
                 href="#contact-section"
+                ref={contactRef}
                 id="contact-link"
-                className=" bg-white text-black text-sm rounded-xl p-3 m-auto h-full min-w-min  hover:bg-blue-500 hover:text-white transition duration-200 ease-in-out"
+                className="hiddenContact glowing-shadow bg-white text-black text-md rounded-xl p-3 mx-auto my-4 h-full min-w-min  hover:bg-blue-500 hover:text-white transition-all duration-250 ease-in-out"
               >
                 Contact Me
               </a>

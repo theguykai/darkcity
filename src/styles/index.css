@@ -20,6 +20,70 @@ li:hover {
   border-color: #ddd;
 }
 
+.hiddenAbout {
+  opacity: 0;
+  transform: translateY(-75%);
+  transition: 2s ease-in-out;
+}
+
+.hiddenContact {
+  opacity: 0;
+  transform: translateY(100%);
+  transition: 2s ease-in-out;
+}
+
+.showAbout {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+hr {
+  width: 0%;
+  margin: auto;
+  transition: 1s;
+}
+
+.hr-full-width {
+  width: 100%;
+}
+
+.hiddenElementLeft {
+  opacity: 0;
+  transform: translateX(-100%);
+}
+
+.hiddenElementRight {
+  opacity: 0;
+  transform: translateX(100%);
+}
+
+.show {
+  opacity: 1;
+  transform: translateX(0);
+  transition: 0.5s;
+}
+
+@keyframes glowingShadow {
+  0%,
+  100% {
+    box-shadow: 0 0 5px 0 rgba(200, 200, 255, 0.7),
+      0 0 8px 0 rgba(200, 200, 255, 0.5), 0 0 10px 0 rgba(200, 200, 255, 0.3);
+  }
+  50% {
+    box-shadow: 0 0 10px 5px rgba(200, 200, 255, 0.9),
+      0 0 15px 5px rgba(200, 200, 255, 0.7),
+      0 0 20px 5px rgba(200, 200, 255, 0.5);
+  }
+}
+
+.glowing-shadow {
+  animation: glowingShadow 2.5s ease-in-out infinite;
+}
+
+#contact-link:hover {
+  animation: none;
+  box-shadow: 0 0 15px 10px rgba(0, 0, 255, 1);
+}
 /* .project-context,
 .project-img {
   transition: all 1s ease-in-out;

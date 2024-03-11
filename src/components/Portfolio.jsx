@@ -5,7 +5,9 @@ const Portfolio = (props) => {
         id="portfolio-section"
         className="flex justify-center items-center flex-col"
       >
-        <h1 className="text-3xl uppercase tracking-tighter">Portfolio</h1>
+        <h1 className="text-2xl md:text-3xl uppercase tracking-tighter">
+          Portfolio
+        </h1>
         <div
           id="portfolio-container"
           className="flex justify-center items-center flex-col w-screen"
