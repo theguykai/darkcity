@@ -9,6 +9,7 @@ const About = () => {
   const hrRef2 = useRef(null);
   const [animateHr, setAnimateHr] = useState(false);
 
+  // check if the about section is in view then start animation
   useEffect(() => {
     const observer = new IntersectionObserver(
       (entries) => {

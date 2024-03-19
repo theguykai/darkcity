@@ -1,5 +1,4 @@
 import React from "react";
-import Header from "./components/Header";
 import Navbar from "./components/Navbar";
 import Video from "./components/Video";
 import About from "./components/About";
@@ -11,6 +10,7 @@ import Footer from "./components/Footer";
 import images from "./data/images.js";
 
 export default function App() {
+  // information from data file of images for each portfolio project
   const projects = images.map((image) => {
     return (
       <Project
@@ -27,7 +27,6 @@ export default function App() {
   return (
     <div className="App">
       <Navbar />
-      <Header />
       <Video />
       <About />
       <Portfolio projects={projects} />

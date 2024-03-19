@@ -1,10 +1,10 @@
 import React, { useEffect, useRef } from "react";
 
 const Project = (props) => {
-  // project slide in animation
-
   const cardRef = useRef(null);
 
+  // project slide in animation
+  // checks if card is in view then adds class to show
   useEffect(() => {
     const currentCard = cardRef.current;
     const observer = new IntersectionObserver((entries) => {

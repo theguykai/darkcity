@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 
 const Navbar = () => {
+  //Expand navbar button on mobile
   const [isOpen, setIsOpen] = useState(false);
 
   return (

@@ -19,7 +19,7 @@ app.post("/send-email", (req, res) => {
 
   const mailOptions = {
     from: "yourEmail@example.com",
-    to: "kaidhnshearer@gmail.com",
+    to: process.env.EMAIL_USER,
     subject: `New contact from ${name}`,
     text: `Name: ${name}\nEmail: ${email}\nMessage: ${message}`,
   };
@@ -36,4 +36,4 @@ app.post("/send-email", (req, res) => {
 });
 
 const PORT = 5000;
-app.listen(PORT, "192.168.20.2");
+app.listen(PORT);

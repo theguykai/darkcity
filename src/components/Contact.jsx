@@ -153,7 +153,7 @@ const Contact = () => {
     e.preventDefault();
     setBackground("bg-[#111]");
     setFeedback("Sending...");
-    fetch("http://192.168.20.2:5000/send-email", {
+    fetch("http://localhost:5000/send-email", {
       method: "POST",
       headers: {
         "Content-Type": "application/json",
