@@ -2,21 +2,22 @@
 
 This page was designed with React and TailwindCSS for the front end, and uses NodeJS and Express for the backend (the contact form).
 
-![](https://private-user-images.githubusercontent.com/117431212/314194472-50270145-7557-4a19-8c84-c1270418f1f1.gif?jwt=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJnaXRodWIuY29tIiwiYXVkIjoicmF3LmdpdGh1YnVzZXJjb250ZW50LmNvbSIsImtleSI6ImtleTUiLCJleHAiOjE3MTA4NzU0MDMsIm5iZiI6MTcxMDg3NTEwMywicGF0aCI6Ii8xMTc0MzEyMTIvMzE0MTk0NDcyLTUwMjcwMTQ1LTc1NTctNGExOS04Yzg0LWMxMjcwNDE4ZjFmMS5naWY_WC1BbXotQWxnb3JpdGhtPUFXUzQtSE1BQy1TSEEyNTYmWC1BbXotQ3JlZGVudGlhbD1BS0lBVkNPRFlMU0E1M1BRSzRaQSUyRjIwMjQwMzE5JTJGdXMtZWFzdC0xJTJGczMlMkZhd3M0X3JlcXVlc3QmWC1BbXotRGF0ZT0yMDI0MDMxOVQxOTA1MDNaJlgtQW16LUV4cGlyZXM9MzAwJlgtQW16LVNpZ25hdHVyZT04NTYwODFhNzI0N2VlZDgwMjVhMDgxNWFmOGNhY2Y2OTZmZjE4NGI1Y2MyOWRhMjY2N2ZmY2ExZmE3NzdiMjEwJlgtQW16LVNpZ25lZEhlYWRlcnM9aG9zdCZhY3Rvcl9pZD0wJmtleV9pZD0wJnJlcG9faWQ9MCJ9._rWRkIhsjNgH1mthitYQwYxyy0CggEmpH61sDylvXs8)
+I asked my friend if I could upgrade his videography portfolio page as he had an outdated Wix design, which has now expired.
 
-### This page is yet to be deployed publicly
+![demo1](https://github.com/theguykai/darkcity/assets/117431212/bb7a061f-c6e3-4a69-b9df-d19086b8b1fe)
 
-This is my first full stack page built with React, Tailwind, Node and Express.
-I created it as my friend's portfolio page is old, and could use with a touch up - see it here - https://www.darkcityproductions.com.au
-It took me about 3 days to complete in total, as I had never used Tailwind, Node or Express before.
+I had never created a page with a backend, and had never used TailwindCSS, NodeJS or ExpressJS before.
 
-![](https://private-user-images.githubusercontent.com/117431212/314194745-b73da90d-7d85-40fc-bb93-f445d4e5b007.gif?jwt=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJnaXRodWIuY29tIiwiYXVkIjoicmF3LmdpdGh1YnVzZXJjb250ZW50LmNvbSIsImtleSI6ImtleTUiLCJleHAiOjE3MTA4NzUzOTcsIm5iZiI6MTcxMDg3NTA5NywicGF0aCI6Ii8xMTc0MzEyMTIvMzE0MTk0NzQ1LWI3M2RhOTBkLTdkODUtNDBmYy1iYjkzLWY0NDVkNGU1YjAwNy5naWY_WC1BbXotQWxnb3JpdGhtPUFXUzQtSE1BQy1TSEEyNTYmWC1BbXotQ3JlZGVudGlhbD1BS0lBVkNPRFlMU0E1M1BRSzRaQSUyRjIwMjQwMzE5JTJGdXMtZWFzdC0xJTJGczMlMkZhd3M0X3JlcXVlc3QmWC1BbXotRGF0ZT0yMDI0MDMxOVQxOTA0NTdaJlgtQW16LUV4cGlyZXM9MzAwJlgtQW16LVNpZ25hdHVyZT1jMmNkNDYyYTIxYmVmZGY2N2UzYjE4MDgyM2QwY2IwYTM3MWZhN2YxYWIzNmY2NmU1MmMyMjFmMGM0NjcxM2VjJlgtQW16LVNpZ25lZEhlYWRlcnM9aG9zdCZhY3Rvcl9pZD0wJmtleV9pZD0wJnJlcG9faWQ9MCJ9.sNGgDUgxH1FJQo1GYPwMY0MsdHjHIyxnJU4BqqAks48)
+The project took me about 3 days to build, as I watched tutorials and read through docs to learn Tailwind and create a backend for the email form.
 
+![demo2](https://github.com/theguykai/darkcity/assets/117431212/7763285e-c56f-4a93-9ba6-ad16b1563ad3)
 
-### To run the page locally once cloned, run "npm start" when inside the darkcity folder in a terminal, and then run "node server.js" in a separate terminal for the backend to work.
+I tried to keep the page simplistic, user friendly, and straight to the point for potential clients.
 
-![](https://private-user-images.githubusercontent.com/117431212/314195137-17c99f43-b6cb-4da5-a86d-8ba62d5394b7.gif?jwt=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJnaXRodWIuY29tIiwiYXVkIjoicmF3LmdpdGh1YnVzZXJjb250ZW50LmNvbSIsImtleSI6ImtleTUiLCJleHAiOjE3MTA4NzUzOTcsIm5iZiI6MTcxMDg3NTA5NywicGF0aCI6Ii8xMTc0MzEyMTIvMzE0MTk1MTM3LTE3Yzk5ZjQzLWI2Y2ItNGRhNS1hODZkLThiYTYyZDUzOTRiNy5naWY_WC1BbXotQWxnb3JpdGhtPUFXUzQtSE1BQy1TSEEyNTYmWC1BbXotQ3JlZGVudGlhbD1BS0lBVkNPRFlMU0E1M1BRSzRaQSUyRjIwMjQwMzE5JTJGdXMtZWFzdC0xJTJGczMlMkZhd3M0X3JlcXVlc3QmWC1BbXotRGF0ZT0yMDI0MDMxOVQxOTA0NTdaJlgtQW16LUV4cGlyZXM9MzAwJlgtQW16LVNpZ25hdHVyZT1jZWM5Y2YwYmZjNzY0YWNlODk3N2U5NTVjZmI4NjZlMzM3ZTE0NTFjODYxMGVlMTQ4MWFhNjg2MTMwYjM5ZTY2JlgtQW16LVNpZ25lZEhlYWRlcnM9aG9zdCZhY3Rvcl9pZD0wJmtleV9pZD0wJnJlcG9faWQ9MCJ9.NVOsRzXQF6pjsSHP6b6C-MGpVqA5fosuiRqn5fCtXe0)
+![demo3](https://github.com/theguykai/darkcity/assets/117431212/9da59937-4ccf-4b73-a3ab-d300fb4490af)
 
-## The frontend uses localhost:3000 and the backend uses localhost:5000
+As I am still learning how to deploy websites, I have not deployed this to a cloud based service yet for my friend.
+
+To see the code in full, clone the repo and run npm install to install all the necessary modules, and start the frontend on localhost:3000, and backend on localhost:5000
 
 #### In future projects, I have learnt to create frontend and backend folders, and have separate package.json files.
