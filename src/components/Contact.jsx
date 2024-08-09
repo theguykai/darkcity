@@ -20,7 +20,7 @@ const Contact = () => {
     setFeedback("Sending...");
     const apiEndpoint =
       process.env.NODE_ENV === "production"
-        ? "https://your-heroku-app-name.herokuapp.com/send-email"
+        ? "https://enigmatic-badlands-08625-53bf90efff1c.herokuapp.com/send-email"
         : "http://localhost:5000/send-email";
 
     fetch(apiEndpoint, {
