@@ -71,8 +71,9 @@ const About = () => {
               </h2>
               <hr ref={hrRef1} />
               <p ref={paragraphRef} className="hiddenAbout text-md">
-                A freelance cinematographer & camera operator located on the
-                Gold Coast
+                A Gold Coast Videographer specializing in high-quality film
+                production and video editing services. Based in Queensland, on
+                the Gold Coast.
               </p>
               <hr ref={hrRef2} />
               <a
