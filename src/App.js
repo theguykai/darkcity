@@ -10,7 +10,6 @@ import Footer from "./components/Footer";
 import images from "./data/images.js";
 
 export default function App() {
-  // information from data file of images for each portfolio project
   const projects = images.map((image) => {
     return (
       <Project
