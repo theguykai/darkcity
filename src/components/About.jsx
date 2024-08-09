@@ -76,7 +76,7 @@ const About = () => {
               </p>
               <hr ref={hrRef2} />
               <a
-                href="#contact-section"
+                href="#contact"
                 ref={contactRef}
                 id="contact-link"
                 className="hiddenContact glowing-shadow bg-white text-black text-md rounded-xl p-3 mx-auto my-4 h-full min-w-min  hover:bg-blue-500 hover:text-white transition duration-400 ease-in-out"
