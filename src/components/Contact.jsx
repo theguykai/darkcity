@@ -45,7 +45,7 @@ const Contact = () => {
   return (
     <div>
       <section
-        id="contact-section"
+        id="contact"
         className="min-h-[75vh] flex justify-center items-center flex-col"
       >
         <div className="w-11/12 sm:w-10/12 md:w-9/12 flex justify-center items-center gap-5 flex-col font-mono">

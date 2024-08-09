@@ -4,7 +4,7 @@ import ReactPlayer from "react-player";
 const Video = () => {
   return (
     <div>
-      <section id="home-section" className="h-[75vh] md:h-screen md:w-screen">
+      <section id="home" className="h-[75vh] md:h-screen md:w-screen">
         <div
           id="video-blocker"
           className="absolute h-full w-full opacity-0"

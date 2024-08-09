@@ -35,22 +35,22 @@ const Navbar = () => {
           } absolute md:relative top-12 left-0 md:top-auto w-full md:w-auto md:bg-transparent z-10`}
         >
           <li className="nav-link my-2 mx-2 p-0.5 list-none border-b-2 border-hidden md:border-solid  border-transparent">
-            <a href="#home-section" className="no-underline z-10 ">
+            <a href="#home" className="no-underline z-10 ">
               Home
             </a>
           </li>
           <li className="nav-link my-2 mx-2 p-0.5 list-none border-b-2 border-hidden md:border-solid border-transparent">
-            <a href="#about-section" className="no-underline">
+            <a href="#about" className="no-underline">
               About
             </a>
           </li>
           <li className="nav-link my-2 mx-2 p-0.5 list-none border-b-2 border-hidden md:border-solid  border-transparent">
-            <a href="#portfolio-section" className=" no-underline">
+            <a href="#portfolio" className=" no-underline">
               Portfolio
             </a>
           </li>
           <li className="nav-link my-2 mx-2 p-0.5 list-none border-b-2 border-hidden md:border-solid  border-transparent">
-            <a href="#contact-section" className=" no-underline">
+            <a href="#contact" className=" no-underline">
               Contact
             </a>
           </li>

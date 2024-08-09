@@ -54,7 +54,7 @@ const About = () => {
   return (
     <div>
       <section
-        id="about-section"
+        id="about"
         className="flex justify-center items-center h-screen w-screen"
       >
         <article className="flex items-center h-3/4 w-10/12 rounded-lg shadow-[0_0_20px_10px_rgba(200,200,200,0.1)]">
