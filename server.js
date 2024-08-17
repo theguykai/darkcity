@@ -3,6 +3,7 @@ const express = require("express");
 const cors = require("cors");
 const nodemailer = require("nodemailer");
 const path = require("path");
+const dns = require("dns");
 const app = express();
 app.use(express.json());
 app.use(cors());
@@ -15,24 +16,50 @@ const transporter = nodemailer.createTransport({
   },
 });
 
+const validateEmailFormat = (email) => {
+  const re = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+  return re.test(email);
+};
+
+const validateEmailDomain = (email, callback) => {
+  const domain = email.split("@")[1];
+  dns.resolveMx(domain, (err, addresses) => {
+    if (err || addresses.length === 0) {
+      callback(false);
+    } else {
+      callback(true);
+    }
+  });
+};
+
 app.post("/send-email", (req, res) => {
   const { name, email, message } = req.body;
 
-  const mailOptions = {
-    from: "yourEmail@example.com",
-    to: process.env.EMAIL_USER,
-    subject: `New contact from ${name}`,
-    text: `Name: ${name}\nEmail: ${email}\nMessage: ${message}`,
-  };
+  if (!validateEmailFormat(email)) {
+    return res.status(400).send({ message: "Invalid email format" });
+  }
 
-  transporter.sendMail(mailOptions, (error, info) => {
-    if (error) {
-      console.log(error);
-      res.status(500).send({ message: "Error sending email", error });
-    } else {
-      console.log("Email sent: " + info.response);
-      res.status(200).send({ message: "Email sent successfully" });
+  validateEmailDomain(email, (isValidDomain) => {
+    if (!isValidDomain) {
+      return res.status(400).send({ message: "Invalid email domain" });
     }
+
+    const mailOptions = {
+      from: "yourEmail@example.com",
+      to: process.env.EMAIL_USER,
+      subject: `New contact from ${name}`,
+      text: `Name: ${name}\nEmail: ${email}\nMessage: ${message}`,
+    };
+
+    transporter.sendMail(mailOptions, (error, info) => {
+      if (error) {
+        console.log(error);
+        res.status(500).send({ message: "Error sending email", error });
+      } else {
+        console.log("Email sent: " + info.response);
+        res.status(200).send({ message: "Email sent successfully" });
+      }
+    });
   });
 });
 
