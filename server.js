@@ -4,6 +4,7 @@ const cors = require("cors");
 const nodemailer = require("nodemailer");
 const path = require("path");
 const dns = require("dns");
+const validator = require("email-validator");
 const app = express();
 app.use(express.json());
 app.use(cors());
@@ -35,6 +36,12 @@ const validateEmailDomain = (email, callback) => {
 app.post("/send-email", (req, res) => {
   const { name, email, message } = req.body;
 
+  if (!validator.validate(email)) {
+    return res
+      .status(400)
+      .send({ success: false, message: "Invalid email address." });
+  }
+
   if (!validateEmailFormat(email)) {
     return res.status(400).send({ message: "Invalid email format" });
   }
@@ -45,7 +52,7 @@ app.post("/send-email", (req, res) => {
     }
 
     const mailOptions = {
-      from: "yourEmail@example.com",
+      from: email,
       to: process.env.EMAIL_USER,
       subject: `New contact from ${name}`,
       text: `Name: ${name}\nEmail: ${email}\nMessage: ${message}`,
