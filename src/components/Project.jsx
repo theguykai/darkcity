@@ -34,7 +34,7 @@ const Project = (props) => {
       ref={cardRef}
       className={`card ${hiddenElement} flex justify-center items-center w-11/12 sm:w-9/12 my-8 rounded-3xl flex-col sm:flex-row shadow-[0_0_30px_1px_rgba(200,200,200,0.1)]  hover:shadow-gray-300 hover:w-10/12`}
     >
-      {/* render pic different side each time */}
+      {/* Render pic different side each time */}
       <a href={props.url} className="project-link flex w-full rounded-3xl">
         {props.num % 2 === 1 ? (
           <img
