@@ -10,12 +10,30 @@ const Contact = () => {
 
   const [background, setBackground] = useState("bg-[#111]");
 
+  const validateEmail = (email) => {
+    const re = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+    return re.test(email);
+  };
+
   const handleChange = (e) => {
     setFormState({ ...formState, [e.target.id]: e.target.value });
   };
 
   const handleSubmit = (e) => {
     e.preventDefault();
+
+    if (!formState.name || !formState.email || !formState.message) {
+      setFeedback("All fields are required.");
+      setBackground("bg-red-500");
+      return;
+    }
+
+    if (!validateEmail(formState.email)) {
+      setFeedback("Please enter a valid email.");
+      setBackground("bg-red-500");
+      return;
+    }
+
     setBackground("bg-[#111]");
     setFeedback("Sending...");
     const apiEndpoint =
