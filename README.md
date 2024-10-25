@@ -2,7 +2,7 @@
 
 This page was designed with React and TailwindCSS for the front end, and uses NodeJS and Express for the backend (the contact form).
 
-### This page is yet to be deployed publicly
+### See it here - [https://www.darkcityproductions.com.au/](https://www.darkcityproductions.com.au/)
 
 This is my first full stack page built with React, Tailwind, Node and Express.
 I created it as my friend's portfolio page is old, and could use with a touch up - see it here - https://www.darkcityproductions.com.au
